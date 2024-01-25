@@ -1091,8 +1091,16 @@
       },
       "xunit.runner.visualstudio/2.4.3": {},
       "Marketplace.Domain/1.0.0": {
+        "dependencies": {
+          "Marketplace.Framework": "1.0.0"
+        },
         "runtime": {
           "Marketplace.Domain.dll": {}
+        }
+      },
+      "Marketplace.Framework/1.0.0": {
+        "runtime": {
+          "Marketplace.Framework.dll": {}
         }
       }
     }
@@ -1748,6 +1756,11 @@
       "hashPath": "xunit.runner.visualstudio.2.4.3.nupkg.sha512"
     },
     "Marketplace.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Marketplace.Framework/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

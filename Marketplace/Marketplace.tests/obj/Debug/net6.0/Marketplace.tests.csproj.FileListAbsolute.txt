@@ -88,7 +88,9 @@ C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.tests\bin\Deb
 C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.tests\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.tests\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.tests\bin\Debug\net6.0\Marketplace.Domain.dll
+C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.tests\bin\Debug\net6.0\Marketplace.Framework.dll
 C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.tests\bin\Debug\net6.0\Marketplace.Domain.pdb
+C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.tests\bin\Debug\net6.0\Marketplace.Framework.pdb
 C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.tests\obj\Debug\net6.0\Marketplace.tests.csproj.AssemblyReference.cache
 C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.tests\obj\Debug\net6.0\Marketplace.tests.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.tests\obj\Debug\net6.0\Marketplace.tests.AssemblyInfoInputs.cache

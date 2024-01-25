@@ -1674,11 +1674,24 @@
       "Marketplace.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Marketplace.Framework": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Marketplace.Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/Marketplace.Domain.dll": {}
+        }
+      },
+      "Marketplace.Framework/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Marketplace.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Marketplace.Framework.dll": {}
         }
       }
     }
@@ -5981,6 +5994,11 @@
       "type": "project",
       "path": "../Marketplace.Domain/Marketplace.Domain.csproj",
       "msbuildProject": "../Marketplace.Domain/Marketplace.Domain.csproj"
+    },
+    "Marketplace.Framework/1.0.0": {
+      "type": "project",
+      "path": "../Marketplace.Framework/Marketplace.Framework.csproj",
+      "msbuildProject": "../Marketplace.Framework/Marketplace.Framework.csproj"
     }
   },
   "projectFileDependencyGroups": {
