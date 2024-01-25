@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Marketplace.Domain
 {
     [Serializable]
-    internal class CurrencyMismatchException : Exception
+    public class CurrencyMismatchException : Exception
     {
         public CurrencyMismatchException()
         {
