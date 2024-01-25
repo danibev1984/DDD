@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "r2vz7519ilz646B7l8DcTkwo0q8OPg+JamtoghOkngn6Q6APW+ojmEioCJynJSFITGTf214kv7YmdXIN8UclwA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HomeWork\\Documents\\STUDY CODE\\DDD\\Marketplace\\Marketplace.Domain\\Marketplace.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HomeWork\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\HomeWork\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
