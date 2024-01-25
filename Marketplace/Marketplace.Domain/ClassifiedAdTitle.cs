@@ -8,6 +8,7 @@ namespace Marketplace.Domain
         public static ClassifiedAdTitle FromString(string title) => new ClassifiedAdTitle(title);
 
         private readonly string _value;
+        
         private ClassifiedAdTitle(string value)
         {
             if(value.Length > 100)
@@ -15,5 +16,7 @@ namespace Marketplace.Domain
 
             _value = value;
         }
+
+        public static implicit operator string(ClassifiedAdTitle self) => self._value;
     }
 }

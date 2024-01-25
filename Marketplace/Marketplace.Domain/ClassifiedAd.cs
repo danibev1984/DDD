@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Marketplace.Framework;
 
 namespace Marketplace.Domain
 {
@@ -10,10 +10,11 @@ namespace Marketplace.Domain
         MarkedAsSold
     };
 
-    public class ClassifiedAd
+    public class ClassifiedAd : Entity
     {
         public ClassifiedAdId Id { get; }
         public UserId OwnerId { get; private set; }
+        public UserId ApprovedBy { get; private set; }
         public ClassifiedAdTitle Title { get; private set; }
         public ClassifiedAdText Text { get; private set; }
         public Money Price { get; private set; }
@@ -25,6 +26,7 @@ namespace Marketplace.Domain
             OwnerId = ownerId;
             State = ClassifiedAdState.Inactive;
             EnsureValidState();
+            Raise(new Events.ClassifiedAdCreated { Id = id, OwnerId = ownerId });
         }
 
 
@@ -32,38 +34,50 @@ namespace Marketplace.Domain
         {
             Title = title;
             EnsureValidState();
+            Raise(new Events.ClassifiedAdTitleChanged { Id = Id, Title = title });
         }
 
         public void UpdateText(ClassifiedAdText text)
         {
             Text = text;
             EnsureValidState();
+            Raise(new Events.ClassifiedAdTextUpdated { Id = Id, AdText = Text });
+
         }
 
         public void UpdatePrice(Money price)
         {
             Price = price;
             EnsureValidState();
+            Raise(new Events.ClassifiedPriceUpdated { Id = Id, CurrencyCode = price.Currency.CurrencyCode, Price = price.Amount });
+
         }
-         
+
         public void RequestToPublish()
         {
             State = ClassifiedAdState.PendingReview;
             EnsureValidState();
+            Raise(new Events.ClassifiedAdSentForReview { Id = Id });
+
         }
 
         protected void EnsureValidState()
         {
-            if (Title == null)
-                throw new InvalidEntityStateException(this, "title cannot be empty");
+            bool stateValid = true;
 
-            if (Text == null)
-                throw new InvalidEntityStateException(this, "text cannot be empty");
+            switch(State)
+            {
+                case ClassifiedAdState.PendingReview: stateValid = Title != null && Text != null && Price?.Amount > 0; break;
+                case ClassifiedAdState.Active: stateValid = Title != null && Text != null && Price?.Amount > 0 && ApprovedBy != null; break;
+            }
 
-            if (Price?.Amount == 0)
-                throw new InvalidEntityStateException(this, "price cannot be zero");
-
-
+            var valid =
+                Id != null &&
+                OwnerId != null &&
+                stateValid;
+            
+            if (!valid)
+                throw new InvalidEntityStateException(this, $"Post-checks failed in state {State}");
         }
     }
 }
