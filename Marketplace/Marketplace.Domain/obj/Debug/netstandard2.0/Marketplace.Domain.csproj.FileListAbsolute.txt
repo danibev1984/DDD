@@ -1,0 +1,10 @@
+C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.Domain\bin\Debug\netstandard2.0\Marketplace.Domain.deps.json
+C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.Domain\bin\Debug\netstandard2.0\Marketplace.Domain.dll
+C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.Domain\bin\Debug\netstandard2.0\Marketplace.Domain.pdb
+C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.Domain\obj\Debug\netstandard2.0\Marketplace.Domain.csproj.AssemblyReference.cache
+C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.Domain\obj\Debug\netstandard2.0\Marketplace.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.Domain\obj\Debug\netstandard2.0\Marketplace.Domain.AssemblyInfoInputs.cache
+C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.Domain\obj\Debug\netstandard2.0\Marketplace.Domain.AssemblyInfo.cs
+C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.Domain\obj\Debug\netstandard2.0\Marketplace.Domain.csproj.CoreCompileInputs.cache
+C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.Domain\obj\Debug\netstandard2.0\Marketplace.Domain.dll
+C:\Users\HomeWork\Documents\STUDY CODE\DDD\Marketplace\Marketplace.Domain\obj\Debug\netstandard2.0\Marketplace.Domain.pdb

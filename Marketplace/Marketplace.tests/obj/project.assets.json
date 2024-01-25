@@ -1670,6 +1670,16 @@
         "build": {
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "Marketplace.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Marketplace.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Marketplace.Domain.dll": {}
+        }
       }
     }
   },
@@ -5966,10 +5976,16 @@
         "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "Marketplace.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Marketplace.Domain/Marketplace.Domain.csproj",
+      "msbuildProject": "../Marketplace.Domain/Marketplace.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Marketplace.Domain >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
       "coverlet.collector >= 3.1.2",
       "xunit >= 2.4.1",
@@ -6002,7 +6018,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\HomeWork\\Documents\\STUDY CODE\\DDD\\Marketplace\\Marketplace.Domain\\Marketplace.Domain.csproj": {
+              "projectPath": "C:\\Users\\HomeWork\\Documents\\STUDY CODE\\DDD\\Marketplace\\Marketplace.Domain\\Marketplace.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
