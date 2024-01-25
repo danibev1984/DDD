@@ -24,13 +24,35 @@ namespace Marketplace.Domain
             Id = id;
             OwnerId = ownerId;
             State = ClassifiedAdState.Inactive;
+            EnsureValidState();
         }
 
-        public void SetTitle(ClassifiedAdTitle title) => Title = title;
-        public void UpdateText(ClassifiedAdText text) => Text = text;
-        public void UpdatePrice(Money price) => Price = price;
 
+        public void SetTitle(ClassifiedAdTitle title)
+        {
+            Title = title;
+            EnsureValidState();
+        }
+
+        public void UpdateText(ClassifiedAdText text)
+        {
+            Text = text;
+            EnsureValidState();
+        }
+
+        public void UpdatePrice(Money price)
+        {
+            Price = price;
+            EnsureValidState();
+        }
+         
         public void RequestToPublish()
+        {
+            State = ClassifiedAdState.PendingReview;
+            EnsureValidState();
+        }
+
+        protected void EnsureValidState()
         {
             if (Title == null)
                 throw new InvalidEntityStateException(this, "title cannot be empty");
@@ -38,10 +60,10 @@ namespace Marketplace.Domain
             if (Text == null)
                 throw new InvalidEntityStateException(this, "text cannot be empty");
 
-            if(Price?.Amount == 0)
+            if (Price?.Amount == 0)
                 throw new InvalidEntityStateException(this, "price cannot be zero");
 
-            State = ClassifiedAdState.PendingReview;
+
         }
     }
 }

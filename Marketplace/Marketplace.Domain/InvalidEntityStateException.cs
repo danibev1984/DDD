@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Marketplace.Domain
 {
     [Serializable]
-    internal class InvalidEntityStateException : Exception
+    public class InvalidEntityStateException : Exception
     {
         private ClassifiedAd classifiedAd;
         private string v;
