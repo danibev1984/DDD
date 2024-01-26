@@ -24,7 +24,7 @@ namespace Marketplace.Domain
             public string AdText { get; set; }
         }
 
-        public class ClassifiedPriceUpdated
+        public class ClassifiedAdPriceUpdated
         {
             public Guid Id { get; set; }
             public decimal Price { get; set; }
