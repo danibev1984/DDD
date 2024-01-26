@@ -87,7 +87,7 @@ namespace Marketplace.Domain
                     Title = ClassifiedAdTitle.FromString(e.Title);
                     break;
                 case Events.ClassifiedAdTextUpdated e:
-                    Text = ClassifiedAdText.FromString(e.AdText);
+                    Text = new ClassifiedAdText(e.AdText);
                     break;
                 case Events.ClassifiedAdPriceUpdated e:
                     Price = new Price(e.Price, e.CurrencyCode);
